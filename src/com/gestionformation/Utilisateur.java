@@ -1,0 +1,66 @@
+package com.gestionformation;
+
+public class Utilisateur {
+    private String nom;
+    private String prenom;
+    private String email;
+    private String motDePasse;
+
+    public Utilisateur(String nom, String prenom, String email, String motDePasse) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.email = email;
+        this.motDePasse = motDePasse;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getMotDePasse() {
+        return motDePasse;
+    }
+
+    public void setMotDePasse(String motDePasse) {
+        this.motDePasse = motDePasse;
+    }
+
+    public void seConnecter(String email, String motDePasse) {
+        if (this.email.equals(email) && this.motDePasse.equals(motDePasse)) {
+            System.out.println("Connecté avec succès!");
+        } else {
+            System.out.println("Email ou mot de passe invalide.");
+        }
+    }
+
+    public void seDeconnecter() {
+        System.out.println("Déconnecté avec succès.");
+    }
+
+    public void afficherProfil() {
+        System.out.println("Nom: " + nom);
+        System.out.println("Prénom: " + prenom);
+        System.out.println("Email: " + email);
+    }
+}
+
